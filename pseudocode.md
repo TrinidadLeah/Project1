@@ -1,6 +1,6 @@
 #Pseudocode - Project 1
 
-##Themed Hangman
+## Themed Hangman
 
 1. Initially, on page load, we want the state to be the display of a word from an array of words, a keyboard and a gallow platform.
 
@@ -8,7 +8,7 @@
 - The word will need to be selected randomly.
 
 
-###Game Play
+### Game Play
 ****
 
 - Using an array, when a letter is selected, that letter will need to be checked against the length of the secret chosen word.
@@ -18,7 +18,7 @@
 5. If the letter is a match, the display is rendered with the letter showing itself.
 6. If the letter is not a match, a UI element is added to the hangman.
 
-###Win Conditions
+### Win Conditions
 ---
 
 8. The looping continues through all the user choices.
