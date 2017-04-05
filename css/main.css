@@ -1,14 +1,14 @@
 
 html{
 
-  background: url(images/bg.jpeg) no-repeat center center fixed;
+  background: url("../images/bg.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-  body {
+body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color:white;
   text-align:center;
@@ -47,8 +47,8 @@ p{
 .alphabet {
 
   margin:15px auto;
-  padding:0;
-  max-width:700px;
+  padding-top: 20px;
+  width:100%;
 }
 
 .alphabet li {
@@ -71,11 +71,14 @@ transition: background .5s ease-in, transform .25s ease-in-out;
 transform: scale(1.1);
 
     }
-.man {
-  padding: 100px;
+#man {
+  padding-top: 30px;
+  height: 300px;
+  max-width: 200px;
   margin: 0 auto;
   display: table;
   clear: both;
+
 }
 button{
 display: inline;
@@ -89,7 +92,7 @@ display: inline;
   font-size:1.2em;
   padding:18px 10px;
   width:180px;
-  margin: 10px;
+  margin: 30px;
   outline: none;
 transition: background .5s ease-in, transform .25s ease-in-out;
     }
@@ -100,9 +103,22 @@ transform: scale(1.1);
 
 }
 .container {
-margin: 0 auto;
-clear: both;
-display:table;
+  margin: 0 auto;
+  clear: both;
+  display:table;
+}
+
+.guess {
+  letter-spacing: 4px;
+  font-size: 2em;
+}
+
+li.used-letter {
+  background: #696969;
+  color: white;
+}
+.man {
 
 }
+
 
