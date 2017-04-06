@@ -13,3 +13,11 @@ I made this version of Hangman for my first project during General Assembly's We
 2. CSS
  + CSS3 Animations and Transitions
 3. Javascript
+
+##Getting Started
+
+**Play online here:** [http://TrinidadLeah.github.io/Project1/]()
+
+##Next Steps:
+
+I'd love to add a "Hints" button that gave a hint for each title, and dive deeper into CSS animations.
