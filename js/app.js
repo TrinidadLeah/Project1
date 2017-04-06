@@ -1,14 +1,15 @@
 /*--variables---*/
-var titles = ['Lolita', 'The Sound and the Fury','Dracula','Great Expectations',
-'Hamlet','The Great Gatsby','Wuthering Heights'];
+var titles = ['Lolita', 'The Sound and the Fury', 'Dracula', 'Great Expectations',
+  'Hamlet', 'The Great Gatsby', 'Wuthering Heights'
+];
 var images = [
-"images/begin state.png",
-"images/Turn 2.png",
-"images/Turn 3.png",
-"images/Turn 4.png",
-"images/Turn 5.png",
-"images/Turn 6.png",
-"images/lose state.png"
+  "images/begin state (2).png",
+  "images/Turn 2 (2).png",
+  "images/Turn 3 (2).png",
+  "images/Turn 4 (2).png",
+  "images/Turn 5 (2).png",
+  "images/Turn 6 (2).png",
+  "images/Lose state 2.png"
 
 ];
 
@@ -28,7 +29,7 @@ document.getElementById('reset').addEventListener('click', newGame);
 
 function getUnderscores() {
   var underscores = "";
-  for (var i =0;  i < chosen.length; i++) {
+  for (var i = 0; i < chosen.length; i++) {
     underscores += chosen[i] === " " ? " " : "_";
   }
   return underscores;
@@ -42,36 +43,39 @@ function handleLetterClick(evt) {
   if (chosen.includes(letter)) {
     var chosenArr = chosen.split("");
     var guessArr = guessed.split("");
-    chosenArr.forEach(function(char, idx){
+    chosenArr.forEach(function (char, idx) {
       if (letter === char) guessArr[idx] = letter;
     });
     guessed = guessArr.join("");
-  } else {
+  }
+  else {
     badGuesses.push(letter);
   }
-  if (guessed === chosen){
+  if (guessed === chosen) {
     message = "You win!";
     gameOver = true;
-  } else if (badGuesses.length === 6){
+  }
+  else if (badGuesses.length === 6) {
     message = "You lose.";
     gameOver = true;
   }
 
 
-  // has lost?
+
   render();
 }
 
 
-function isletterinChosenWord(letter,word) {
+function isletterinChosenWord(letter, word) {
   var underScorified = ""
 
   if (word.indexOf(letter) !== -1) {
     for (var i = 0; i < word.length; i++) {
       if (word[i] === letter) {
-        underScorified+= word[i]
-      } else {
-        underScorified+= " _ "
+        underScorified += word[i]
+      }
+      else {
+        underScorified += " _ "
       }
     }
   }
@@ -81,25 +85,25 @@ function isletterinChosenWord(letter,word) {
 }
 
 
-function newGame(){
-  chosen =  titles[Math.floor(Math.random() * titles.length)].toLowerCase();
+function newGame() {
+  chosen = titles[Math.floor(Math.random() * titles.length)].toLowerCase();
   guessed = getUnderscores();
   badGuesses = [];
   message = " ";
   gameOver = false;
-  keyboard.className = "alphabet";
+  var els = document.querySelectorAll('.alphabet li');
+  for (li of els) {
+    li.classList.remove('used-letter');
+  }
   render();
 }
 
 
-function render(){
-  // render guessed word so far
+function render() {
   guessedEl.innerHTML = guessed;
-  // render the hangman
   messageEl.innerHTML = message;
   document.getElementById('man').setAttribute("src", images[badGuesses.length]);
   document.querySelector('.alphabet').style.display = gameOver ? "none" : "";
-
 }
 
 
