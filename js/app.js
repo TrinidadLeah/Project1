@@ -9,7 +9,7 @@ var images = [
   "images/Turn 4 (2).png",
   "images/Turn 5 (2).png",
   "images/Turn 6 (2).png",
-  "images/Lose state 2.png"
+  "images/Lose State 2.png"
 
 ];
 
