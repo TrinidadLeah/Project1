@@ -3,7 +3,11 @@
 ### By: Trinidad Araujo
 ---
 
+### Description
+
 I made this version of Hangman for my first project during General Assembly's Web Development Immersive program.  It's the traditional game of hangman, but uses only the book titles of classic novels.
+
+
 
 
 ![alt text](http://i.imgur.com/nFDOUJJ.png)
